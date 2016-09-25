@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSimplePager", "MvcSimplePager\MvcSimplePager.csproj", "{5DDC6908-C02A-4BA2-A515-080C090F0228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSimplePagerDemo", "MvcSimplePagerDemo\MvcSimplePagerDemo.csproj", "{7E4CB936-66A0-42D1-80CC-8F3955289CCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DDC6908-C02A-4BA2-A515-080C090F0228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDC6908-C02A-4BA2-A515-080C090F0228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DDC6908-C02A-4BA2-A515-080C090F0228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDC6908-C02A-4BA2-A515-080C090F0228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4CB936-66A0-42D1-80CC-8F3955289CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4CB936-66A0-42D1-80CC-8F3955289CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4CB936-66A0-42D1-80CC-8F3955289CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4CB936-66A0-42D1-80CC-8F3955289CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
