@@ -35,7 +35,7 @@ namespace MvcSimplePagerDemo.Controllers
 
         public ActionResult Index() => View();
 
-        public ActionResult NoticeList(string title, int pageIndex = 1, int pageSize = 10)
+        public ActionResult NoticeList(string title , int pageIndex = 1 , int pageSize = 10)
         {
             int offset = (pageIndex - 1) * pageSize, count = 0;
             IEnumerable<Models.Notice> noticeList = null;
@@ -51,8 +51,8 @@ namespace MvcSimplePagerDemo.Controllers
                 }
                 count = noticeList.Count();
                 noticeList = noticeList.Skip(offset).Take(pageSize);
-                PagerModel pager = new PagerModel(pageIndex, pageSize, count);
-                PagedListModel<Models.Notice> data = noticeList.ToPagedList(pager);
+                PagerModel pager = new PagerModel(pageIndex , pageSize , count);
+                IPagedListModel<Models.Notice> data = noticeList.ToPagedList(pager);
                 return View(data);
             }
             catch (Exception)

@@ -1,12 +1,17 @@
 # MvcSimplePager
+## Intro
 MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的轻量级分页扩展，可以自定义分页时调用的方法，自定义分页所用的样式，样式与代码分离，维护方便。
 
-## 使用说明
-1. 引用 MvcSimplePager 项目 或 MvcSimplePager.dll 程序集
-2. 在项目中创建分页视图
-3. 在需要分页的 Action 中构建 PagerModel 和 PagedListModel
-4. 在需要分页的视图中引用 `@Html.Pager` 扩展方法，并设置分页信息
-5. 详细说明见 MvcSimplePagerDemo 项目
+网上有许多分页都是查询所有数据再从中查询某一页的数据，但是个人感觉数据很少时还可以，如果数据比较多这样根本是不可行的，需要哪一页数据再查询哪一页的数据才是正确的做法，才能一定程度上提高查询的效率。
+
+在网上看了几个分页组件，感觉分页的 html 代码和 CSharp 代码都有不同程度上的耦合，都不是特别不太满意， 于是自己封装了一个分页组件，基本可以实现 html 代码与 CSharp 代码的完全分离。
+
+## GetStarted
+1. 引用MvcSimplePager.dll 程序集（可通过Nuget安装包：`Install-Package MvcSimplePager`）
+2. 在项目中Shared目录下创建自己的分页视图，可以根据 MvcSimplePagerDemo 项目下 Views 下的 Shared 目录中的 PagerPartial 和 PagerPartial1 两个分页视图进行修改
+3. 编写Controller 代码，在需要分页的 Action 中构建 PagerModel 和 PagedListModel，并根据需要设置每组分页显示页码数量（默认最多显示9个页码）
+4. 在需要分页的视图中引用 `@Html.Pager` 扩展方法，并设置必要的分页信息参数
+5. 详细使用说明可参考 MvcSimplePagerDemo 项目
 
 ## Contact
-如果使用过程中遇到什么问题，您可以随时联系我：<ben121011@126.com>
+如果您在使用过程中遇到什么问题，您可以随时联系我：<ben121011@126.com>

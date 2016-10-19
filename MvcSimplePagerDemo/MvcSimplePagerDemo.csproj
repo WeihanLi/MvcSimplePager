@@ -132,6 +132,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\PagerPartial1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

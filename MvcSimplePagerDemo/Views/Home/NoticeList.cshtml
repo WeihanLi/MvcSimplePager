@@ -3,7 +3,7 @@
     Layout = null;
 }
 <ul>
-    @foreach (MvcSimplePagerDemo.Models.Notice item in Model.Data)
+    @foreach (MvcSimplePagerDemo.Models.Notice item in Model)
     {
         <li>
             <a href="/Notice/@item.Path" target="_blank">
@@ -13,3 +13,8 @@
     }
 </ul>
 @Html.Pager(Model.Pager, pageIndex => String.Format("javascript:loadData({0})", pageIndex), "PagerPartial", PagingDisplayMode.Always)
+
+<br/>
+<br />
+
+@Html.Pager(Model.Pager , pageIndex => String.Format("javascript:loadData({0})" , pageIndex) , "PagerPartial1")

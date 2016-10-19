@@ -4,6 +4,7 @@ namespace MvcSimplePager
 {
     /// <summary>
     /// 分页信息模型接口
+    /// IPagerModel
     /// </summary>
     public interface IPagerModel
     {
@@ -51,17 +52,26 @@ namespace MvcSimplePager
         /// 是否有下一页
         /// </summary>
         bool HasNextPage { get; }
+
+        int GroupSize { get; set; }
         /// <summary>
         /// 翻页路径或翻页处理事件
         /// </summary>
-        Func<int, string> OnPageChange { get; set; }
+        Func<int , string> OnPageChange { get; set; }
     }
+
     /// <summary>
-    /// 分页显示模式
+    /// PagingDisplayMode
     /// </summary>
     public enum PagingDisplayMode
     {
+        /// <summary>
+        /// always show the pager
+        /// </summary>
         Always = 0,
+        /// <summary>
+        /// show pager only when pageSize > 1
+        /// </summary>
         IfNeeded = 1
     }
 }
