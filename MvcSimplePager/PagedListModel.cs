@@ -18,7 +18,7 @@ namespace MvcSimplePager
         /// <summary>
         /// PagerModel
         /// </summary>
-        PagerModel Pager { get; }
+        IPagerModel Pager { get; }
     }
 
     /// <summary>
@@ -29,9 +29,9 @@ namespace MvcSimplePager
     {
         public IEnumerable<T> Data { get; }
 
-        public PagerModel Pager { get; }
+        public IPagerModel Pager { get; }
 
-        public PagedListModel(IEnumerable<T> data , PagerModel pager)
+        public PagedListModel(IEnumerable<T> data , IPagerModel pager)
         {
             Data = data;
             Pager = pager;
@@ -53,7 +53,7 @@ namespace MvcSimplePager
     /// </summary>
     public static class Extensions
     {
-        public static IPagedListModel<T> ToPagedList<T>(this IEnumerable<T> data , PagerModel pager)
+        public static IPagedListModel<T> ToPagedList<T>(this IEnumerable<T> data , IPagerModel pager)
         {
             return new PagedListModel<T>(data , pager);
         }
