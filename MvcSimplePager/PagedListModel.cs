@@ -8,12 +8,13 @@ namespace MvcSimplePager
     /// IPagedListModel
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IPagedListModel<out T>
+    public interface IPagedListModel<T> : IEnumerable<T>,IEnumerable
     {
         /// <summary>
         /// Data
         /// </summary>
         IEnumerable<T> Data { get; }
+
         /// <summary>
         /// PagerModel
         /// </summary>
@@ -24,7 +25,7 @@ namespace MvcSimplePager
     /// PagedListModel
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class PagedListModel<T> : IPagedListModel<T>, IEnumerable<T>
+    public class PagedListModel<T> : IPagedListModel<T>
     {
         public IEnumerable<T> Data { get; }
 
