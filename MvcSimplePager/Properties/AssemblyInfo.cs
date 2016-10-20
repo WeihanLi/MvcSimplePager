@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("MvcSimplePager")]
-[assembly: AssemblyDescription("Simple,lightweight,easy to expand pager for asp.net mvc")]
+[assembly: AssemblyDescription("Simple,lightweight,easy to expand pager for asp.net mvc,针对asp.net mvc设计的通用、扩展性良好的轻量级分页扩展")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("WeihanLi")]
 [assembly: AssemblyProduct("MvcSimplePager")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”: :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.1.1.0")]
+[assembly: AssemblyFileVersion("1.1.1.0")]
