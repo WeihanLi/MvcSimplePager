@@ -63,5 +63,7 @@ namespace MvcSimplePager
                 }
             }
         }
+
+        public bool ShowJumpButton { get; set; }
     }
 }
