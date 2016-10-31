@@ -6,11 +6,11 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/WeihanLi/MvcSimplePager</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>代码重构优化</releaseNotes>
+    <releaseNotes>代码优化，降低依赖项的版本和移除不必要的依赖</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Pager MvcPager MvcSimplePager</tags>
   </metadata>
