@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <licenseUrl>https://github.com/WeihanLi/MvcSimplePager/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/WeihanLi/MvcSimplePager</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>

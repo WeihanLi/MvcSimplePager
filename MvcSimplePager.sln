@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSimplePagerDemo", "MvcSi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{435DB2BA-C37A-424C-B401-658E64F1C807}"
 	ProjectSection(SolutionItems) = preProject
+		MvcSimplePager\build.cmd = MvcSimplePager\build.cmd
 		MvcSimplePager\MvcSimplePager.nuspec = MvcSimplePager\MvcSimplePager.nuspec
 		MvcSimplePager\nuget.exe = MvcSimplePager\nuget.exe
-		MvcSimplePager\publish.cmd = MvcSimplePager\publish.cmd
 		README.md = README.md
 	EndProjectSection
 EndProject

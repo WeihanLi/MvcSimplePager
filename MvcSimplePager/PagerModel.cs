@@ -57,7 +57,7 @@ namespace MvcSimplePager
             get { return groupSize; }
             set
             {
-                if (value > 0 && value <= 10)
+                if (value > 0)
                 {
                     groupSize = value;
                 }
