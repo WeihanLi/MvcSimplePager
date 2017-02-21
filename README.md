@@ -8,10 +8,10 @@ MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的�
 
 ## GetStarted
 1. 引用 MvcSimplePager 程序集（可通过Nuget安装包：`Install-Package MvcSimplePager`，也可从 [Nuget.org](http://www.nuget.org/packages/MvcSimplePager/) 下载)
-2. 在项目中Shared目录下创建自己的分页视图，可以根据 MvcSimplePagerDemo 项目下 Views 下的 Shared 目录中的 PagerPartial 和 PagerPartial1 两个分页视图进行修改
-3. 编写Controller 代码，在需要分页的 Action 中构建 PagerModel 和 PagedListModel，并根据需要设置每组分页显示页码数量（默认最多显示9个页码）
+2. 在项目中Shared目录下创建自己的分页视图，可以根据 MvcSimplePagerDemo 项目下 Views 下的 Shared 目录中的 _PagerPartial 、 PagerPartial 和 PagerPartial1 三个分页视图进行修改
+3. 编写Controller 代码，在需要分页的 Action 中构建 PagerModel 和 PagedListModel，并根据需要设置每组分页显示页码数量
 4. 在需要分页的视图中引用 `@Html.Pager` 扩展方法，并设置必要的分页信息参数
-5. 详细使用可参考 MvcSimplePagerDemo 项目
+5. 详细使用可参考 MvcSimplePagerDemo 项目以及这里的 [使用指南](http://www.cnblogs.com/weihanli/p/mvcSimplePager.html#pagerInUse)
 
 ## Contact
 如果您在使用过程中遇到什么问题，您可以随时联系我：<ben121011@126.com>
