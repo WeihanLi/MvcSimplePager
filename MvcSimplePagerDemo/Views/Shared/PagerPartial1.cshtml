@@ -37,7 +37,11 @@ else
                             }
                             else
                             {
-                                <li><a href='@Model.OnPageChange(curPage)'> @(curPage.ToString()) <span class="sr-only">@(curPage.ToString())</a></li>
+                                <li>
+                                    <a href='@Model.OnPageChange(curPage)'>@curPage
+                                        <span class="sr-only"> @curPage </span>
+                                    </a>
+                                </li>
                             }
                         }
                     }
