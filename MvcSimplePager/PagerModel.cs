@@ -51,13 +51,13 @@ namespace MvcSimplePager
 
         public Func<int , string> OnPageChange { get; set; }
 
-        private int groupSize = 8;
+        private int groupSize = 12;
         public int GroupSize
         {
             get { return groupSize; }
             set
             {
-                if (value > 0)
+                if (value > 1)
                 {
                     groupSize = value;
                 }
