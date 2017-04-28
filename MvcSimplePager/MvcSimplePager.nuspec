@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/WeihanLi/MvcSimplePager</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>修改默认参数以更方便的使用，优化代码</releaseNotes>
+    <releaseNotes>增加 索引器，IPagerListModel 允许泛型参数允许协变，代码优化</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>Pager MvcPager MvcSimplePager</tags>
   </metadata>
