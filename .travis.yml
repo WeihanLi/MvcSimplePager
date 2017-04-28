@@ -1,0 +1,7 @@
+language: csharp
+solution: MvcSimplePager.sln
+mono: latest
+install:
+  - nuget restore MvcSimplePager.sln
+script:
+  - xbuild /p:Configuration=Release MvcSimplePager.sln
