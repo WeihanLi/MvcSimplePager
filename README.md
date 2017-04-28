@@ -1,4 +1,9 @@
 # MvcSimplePager
+
+Build Status | Package 
+------------ | ------------
+[![Build Status](https://travis-ci.org/WeihanLi/MvcSimplePager.svg?branch=master)](https://travis-ci.org/WeihanLi/MvcSimplePager) | ![MvcSimplePager](https://img.shields.io/nuget/v/mvcsimplepager.svg)
+
 ## Intro
 MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的轻量级分页扩展，可以自定义分页时调用的方法，自定义分页所用的样式，样式与代码分离，维护方便。
 
