@@ -51,8 +51,7 @@ namespace MvcSimplePagerDemo.Controllers
                 }
                 count = noticeList.Count();
                 noticeList = noticeList.Skip(offset).Take(pageSize);
-                PagerModel pager = new PagerModel(pageIndex , pageSize , count);
-                IPagedListModel<Models.Notice> data = noticeList.ToPagedList(pager);
+                IPagedListModel<Models.Notice> data = noticeList.ToPagedList(pageIndex, pageSize, count);
                 return View(data);
             }
             catch (Exception)
