@@ -4,4 +4,4 @@ mono: latest
 install:
   - nuget restore MvcSimplePager.sln
 script:
-  - xbuild /p:Configuration=Release MvcSimplePager.sln
+  - xbuild /p:Configuration=Release .\MvcSimplePager\MvcSimplePager.csproj
