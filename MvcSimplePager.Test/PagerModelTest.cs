@@ -1,87 +1,98 @@
 ﻿using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace MvcSimplePager.Test
 {
-    [TestClass]
     public class PagerModelTest
     {
-        [TestMethod]
+        [Fact]
         public void PageIndexAndPageSizeTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(2, 10, 40);
-            Assert.AreEqual(2, pager.Pager.PageIndex);
-            Assert.AreEqual(10, pager.Pager.PageSize);
-            Assert.AreEqual(40,pager.Pager.TotalCount);
+            Assert.Equal(2, pager.Pager.PageIndex);
+            Assert.Equal(10, pager.Pager.PageSize);
+            Assert.Equal(40,pager.Pager.TotalCount);
         }
 
-        [TestMethod]
+        [Fact]
         public void PageCountTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(1, 10, 40);
-            Assert.AreEqual(4, pager.Pager.PageCount);
+            Assert.Equal(4, pager.Pager.PageCount);
             pager = Enumerable.Range(13, 8).ToPagedList(2, 12, 20);
-            Assert.AreEqual(2, pager.Pager.PageCount);
+            Assert.Equal(2, pager.Pager.PageCount);
             pager = Enumerable.Range(10, 10).ToPagedList(1, 12, 10);
-            Assert.AreEqual(1, pager.Pager.PageCount);
+            Assert.Equal(1, pager.Pager.PageCount);
         }
 
-        [TestMethod]
+        [Fact]
+        public void PagerTest()
+        {
+            var data = Enumerable.Range(11, 10);
+            var pagerModel = new PagerModel(1, 10, 40);
+            var pager = data.ToPagedList(pagerModel);
+            var pager1 = data.ToPagedList(1,10,40);
+            Assert.True(pager.Pager.PageIndex == pager1.Pager.PageIndex);
+            Assert.True(pager.Pager.PageSize == pager1.Pager.PageSize);
+            Assert.True(pager.Pager.TotalCount == pager1.Pager.TotalCount);
+        }
+
+        [Fact]
         public void PageStartIndexAndPageEndIndexTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(2, 10, 40);
-            Assert.AreEqual(11,pager.Pager.FirstItem);
-            Assert.AreEqual(20, pager.Pager.LastItem);
+            Assert.Equal(11,pager.Pager.FirstItem);
+            Assert.Equal(20, pager.Pager.LastItem);
             pager = Enumerable.Range(13, 8).ToPagedList(2, 12, 20);
-            Assert.AreEqual(13,pager.Pager.FirstItem);
-            Assert.AreEqual(20, pager.Pager.LastItem);
+            Assert.Equal(13,pager.Pager.FirstItem);
+            Assert.Equal(20, pager.Pager.LastItem);
         }
 
-        [TestMethod]
+        [Fact]
         public void HasPrevPageAndNextPageTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(1, 10, 40);
-            Assert.IsFalse(pager.Pager.HasPreviousPage);
-            Assert.IsTrue(pager.Pager.HasNextPage);
+            Assert.False(pager.Pager.HasPreviousPage);
+            Assert.True(pager.Pager.HasNextPage);
             pager = Enumerable.Range(13, 8).ToPagedList(2, 12, 20);
-            Assert.IsFalse(pager.Pager.HasNextPage);
-            Assert.IsTrue(pager.Pager.HasPreviousPage);
+            Assert.False(pager.Pager.HasNextPage);
+            Assert.True(pager.Pager.HasPreviousPage);
             pager = Enumerable.Range(10, 10).ToPagedList(2, 10, 28);
-            Assert.IsTrue(pager.Pager.HasNextPage);
-            Assert.IsTrue(pager.Pager.HasPreviousPage);
+            Assert.True(pager.Pager.HasNextPage);
+            Assert.True(pager.Pager.HasPreviousPage);
             pager = Enumerable.Range(10, 10).ToPagedList(1, 12, 10);
-            Assert.IsFalse(pager.Pager.HasNextPage);
-            Assert.IsFalse(pager.Pager.HasPreviousPage);
+            Assert.False(pager.Pager.HasNextPage);
+            Assert.False(pager.Pager.HasPreviousPage);
             pager = Enumerable.Range(10, 10).ToPagedList(1, 12, 0);
-            Assert.IsFalse(pager.Pager.HasNextPage);
-            Assert.IsFalse(pager.Pager.HasPreviousPage);
+            Assert.False(pager.Pager.HasNextPage);
+            Assert.False(pager.Pager.HasPreviousPage);
         }
 
-        [TestMethod]
+        [Fact]
         public void FirstPageAndLastPageTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(1, 10, 40);
-            Assert.IsFalse(pager.Pager.IsLastPage);
-            Assert.IsTrue(pager.Pager.IsFirstPage);
+            Assert.False(pager.Pager.IsLastPage);
+            Assert.True(pager.Pager.IsFirstPage);
             pager = Enumerable.Range(13, 8).ToPagedList(2, 12, 20);
-            Assert.IsFalse(pager.Pager.IsFirstPage);
-            Assert.IsTrue(pager.Pager.IsLastPage);
+            Assert.False(pager.Pager.IsFirstPage);
+            Assert.True(pager.Pager.IsLastPage);
             pager = Enumerable.Range(10, 10).ToPagedList(2, 10, 28);
-            Assert.IsFalse(pager.Pager.IsFirstPage);
-            Assert.IsFalse(pager.Pager.IsLastPage);
+            Assert.False(pager.Pager.IsFirstPage);
+            Assert.False(pager.Pager.IsLastPage);
             pager = Enumerable.Range(10, 10).ToPagedList(1, 12, 10);
-            Assert.IsTrue(pager.Pager.IsFirstPage);
-            Assert.IsTrue(pager.Pager.IsLastPage);
+            Assert.True(pager.Pager.IsFirstPage);
+            Assert.True(pager.Pager.IsLastPage);
             pager = Enumerable.Range(10, 10).ToPagedList(1, 12, 0);
-            Assert.IsTrue(pager.Pager.IsFirstPage);
-            Assert.IsTrue(pager.Pager.IsLastPage);
+            Assert.True(pager.Pager.IsFirstPage);
+            Assert.True(pager.Pager.IsLastPage);
         }
 
-        [TestMethod]
+        [Fact]
         public void PageDataTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(2, 10, 26);
-            Assert.AreEqual(14,pager[3]);
+            Assert.Equal(14,pager[3]);
         }
     }
 }
