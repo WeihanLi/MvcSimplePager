@@ -3,9 +3,9 @@ solution: MvcSimplePager.sln
 mono: latest
 install:
   - nuget restore MvcSimplePager.sln
-  - nuget install xunit.runners.console -Version 2.2.0 -OutputDirectory testrunner
+  - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Release ./MvcSimplePager/MvcSimplePager.csproj
-  - msbuild /p:Configuration=Debug ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
-  - mono ./testrunner/xunit.runner.console.2.2.0/tools/xunit.console.exe ./MvcSimplePager.Test/bin/Debug/MvcSimplePager.Test.dll
+  - msbuild /p:Configuration=Release ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
+  - mono ./testrunner/xunit.runner.1.9.2/tools/xunit.console.clr4.exe ./MvcSimplePager.Test/bin/Release/MvcSimplePager.Test.dll
   # - ./OpenCover/OpenCover.4.6.519/tools/OpenCover.Console.exe -register:user -target:"./testrunner/xunit.runner.console.2.2.0/tools/xunit.console.x86.exe" -targetargs:"./MvcSimplePager.Test/bin/Debug/MvcSimplePager.Test.dll" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:./MvcSimplePager_coverage.xml
