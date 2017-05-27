@@ -127,7 +127,7 @@ after_build:
 
 # to run your custom scripts instead of automatic MSBuild
 build_script:
-
+  - msbuild MvcSimplePager.sln
 # to disable automatic builds
 #build: off
 

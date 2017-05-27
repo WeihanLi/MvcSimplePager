@@ -6,4 +6,5 @@ install:
 script:
   - xbuild /p:Configuration=Release ./MvcSimplePager/MvcSimplePager.csproj
   - xbuild /p:Configuration=Debug ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
-  - ./packages/OpenCover.4.6.519/tools/OpenCover.Console.exe -register:user -target:"./packages/xunit.runner.console.2.2.0/tools/xunit.console.x86.exe" -targetargs:"./MvcSimplePager.Test/bin/Debug/MvcSimplePager.Test.dll" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:./MvcSimplePager_coverage.xml
+  - ./packages/xunit.runner.console.2.2.0/tools/xunit.console.x86.exe ./MvcSimplePager.Test/MvcSimplePager.Test.dll
+  # - ./packages/OpenCover.4.6.519/tools/OpenCover.Console.exe -register:user -target:"./packages/xunit.runner.console.2.2.0/tools/xunit.console.x86.exe" -targetargs:"./MvcSimplePager.Test/bin/Debug/MvcSimplePager.Test.dll" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:./MvcSimplePager_coverage.xml
