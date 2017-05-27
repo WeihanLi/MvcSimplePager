@@ -1,8 +1,9 @@
 /*/obj
 /*/bin
-/.vs
+/.vs/
 /*/PublishProfiles
 /packages
 /MVCSimplePagerDemo/*.user
 /MvcSimplePager/*.nupkg
 MvcSimplePager_coverage.xml
+/TestResults
