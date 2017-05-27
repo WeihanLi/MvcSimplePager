@@ -167,15 +167,15 @@ test:
 
 # scripts to run before tests
 before_test:
-  - echo test begin
+  - test begin
   # - ps: echo test start from ps
 
 # scripts to run after tests
 after_test:
-
+  - test end
 # to run your custom scripts instead of automatic tests
 test_script:
-  -  xunit.console .\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll /appveyor
+  -  xunit.console MvcSimplePager.Test.dll /appveyor
 
 # to disable automatic tests
 #test: off
