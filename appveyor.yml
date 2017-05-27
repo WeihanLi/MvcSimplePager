@@ -116,52 +116,9 @@ matrix:
     - platform: x64
       configuration: Release
 
-# exclude configuration from the matrix. Works similarly to 'allow_failures' but build not even being started for excluded combination.
-# matrix:
-#   exclude:
-#     - platform: x86
-#       configuration: Debug
 
-# build cache to preserve files/folders between builds
-cache:
-  - packages -> **\packages.config  # preserve "packages" directory in the root of build folder but will reset it if packages.config is modified
-  - projectA\libs
-  - node_modules                    # local npm modules
-  - '%LocalAppData%\NuGet\Cache'    # NuGet < v3
-  - '%LocalAppData%\NuGet\v3-cache  # NuGet v3
-
-#---------------------------------#
-#       build configuration       #
-#---------------------------------#
-
-# build platform, i.e. x86, x64, Any CPU. This setting is optional.
-platform: Any CPU
-
-# to add several platforms to build matrix:
-#platform:
-#  - x86
-#  - Any CPU
-
-# build Configuration, i.e. Debug, Release, etc.
-configuration: Release
-
-# to add several configurations to build matrix:
-#configuration:
-#  - Debug
-#  - Release
-
-build:
-  parallel: true                  # enable MSBuild parallel builds
-  project: MvcSimplePager.sln      # path to Visual Studio solution or project
-  publish_wap: false               # package Web Application Projects (WAP) for Web Deploy
-  publish_wap_xcopy: true         # package Web Application Projects (WAP) for XCopy deployment
-  publish_azure: false            # package Azure Cloud Service projects and push to artifacts
-  publish_nuget: false             # package projects with .nuspec files and push to artifacts
-  publish_nuget_symbols: false     # generate and publish NuGet symbol packages
-  include_nuget_references: false  # add -IncludeReferencedProjects option while packaging NuGet artifacts
-
-  # MSBuild verbosity level
-  verbosity: quiet|minimal|normal|detailed
+# MSBuild verbosity level
+verbosity: quiet|minimal|normal|detailed
 
 
 # scripts to run before build
