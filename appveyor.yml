@@ -117,10 +117,10 @@ matrix:
       configuration: Release
 
 # exclude configuration from the matrix. Works similarly to 'allow_failures' but build not even being started for excluded combination.
-matrix:
-  exclude:
-    - platform: x86
-      configuration: Debug
+# matrix:
+#   exclude:
+#     - platform: x86
+#       configuration: Debug
 
 # build cache to preserve files/folders between builds
 cache:
