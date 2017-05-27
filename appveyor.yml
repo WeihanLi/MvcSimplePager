@@ -116,11 +116,6 @@ matrix:
     - platform: x64
       configuration: Release
 
-
-# MSBuild verbosity level
-verbosity: quiet|minimal|normal|detailed
-
-
 # scripts to run before build
 before_build:
   
