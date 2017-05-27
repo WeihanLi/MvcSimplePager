@@ -175,7 +175,7 @@ after_test:
 
 # to run your custom scripts instead of automatic tests
 test_script:
-  -  .\packages\xunit.runner.console.2.2.0\tools\xunit.console.x86.exe .\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll
+  -  xunit.console .\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll /appveyor
 
 # to disable automatic tests
 #test: off
