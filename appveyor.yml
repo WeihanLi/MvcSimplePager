@@ -121,7 +121,7 @@ before_build:
   
 # scripts to run *after* solution is built and *before* automatic packaging occurs (web apps, NuGet packages, Azure Cloud Services)
 before_package:
-
+  - nuget restore MvcSimplePager.sln
 # scripts to run after build
 after_build:
 
@@ -175,7 +175,7 @@ after_test:
 
 # to run your custom scripts instead of automatic tests
 test_script:
-  -  .\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\packages\xunit.runner.console.2.2.0\tools\xunit.console.x86.exe" -targetargs:".\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:.\MvcSimplePager_coverage.xml
+  -  .\packages\xunit.runner.console.2.2.0\tools\xunit.console.x86.exe .\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll
 
 # to disable automatic tests
 #test: off
