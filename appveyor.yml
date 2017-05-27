@@ -168,6 +168,7 @@ test:
 # scripts to run before tests
 before_test:
   - test begin
+  - nuget install xunit.runner.console -Version 2.2.0 -OutputDirectory testrunner
   # - ps: echo test start from ps
 
 # scripts to run after tests
@@ -175,7 +176,7 @@ after_test:
   - test end
 # to run your custom scripts instead of automatic tests
 test_script:
-  # - xunit.console.clr4 .\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll /appveyor
+  - ./testrunner/xunit.runner.console.2.2.0/tools/xunit.console.exe ./MvcSimplePager.Test/bin/Release/MvcSimplePager.Test.dll /appveyor
 
 # to disable automatic tests
 #test: off
