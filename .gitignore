@@ -5,3 +5,4 @@
 /packages
 /MVCSimplePagerDemo/*.user
 /MvcSimplePager/*.nupkg
+MvcSimplePager_coverage.xml
