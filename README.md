@@ -4,7 +4,8 @@
 ------ | ------------ 
 travis | [![Build Status](https://travis-ci.org/WeihanLi/MvcSimplePager.svg?branch=master)](https://travis-ci.org/WeihanLi/MvcSimplePager) | 
 appveyor | [![Build status](https://ci.appveyor.com/api/projects/status/f3oagcolf02ttyfe?svg=true)](https://ci.appveyor.com/project/WeihanLi/mvcsimplepager) |
-nuget | [![MvcSimplePager](https://img.shields.io/nuget/v/mvcsimplepager.svg)](http://www.nuget.org/packages/MvcSimplePager/)
+nuget | [![MvcSimplePager](https://img.shields.io/nuget/v/mvcsimplepager.svg)](http://www.nuget.org/packages/MvcSimplePager/) |
+codecov | [![codecov](https://codecov.io/gh/WeihanLi/MvcSimplePager/branch/master/graph/badge.svg)](https://codecov.io/gh/WeihanLi/MvcSimplePager) |
 
 ## Intro
 MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的轻量级分页扩展，可以自定义分页时调用的方法，自定义分页所用的样式，样式与代码分离，维护方便。
