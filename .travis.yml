@@ -8,4 +8,3 @@ script:
   - msbuild /p:Configuration=Release ./MvcSimplePager/MvcSimplePager.csproj
   - msbuild /p:Configuration=Release ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
   - mono ./testrunner/xunit.runner.console.2.2.0/tools/xunit.console.exe ./MvcSimplePager.Test/bin/Release/MvcSimplePager.Test.dll
-  # - ./OpenCover/OpenCover.4.6.519/tools/OpenCover.Console.exe -register:user -target:"./testrunner/xunit.runner.console.2.2.0/tools/xunit.console.x86.exe" -targetargs:"./MvcSimplePager.Test/bin/Debug/MvcSimplePager.Test.dll" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:./MvcSimplePager_coverage.xml
