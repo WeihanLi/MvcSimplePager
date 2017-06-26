@@ -9,4 +9,4 @@ install:
   - dotnet restore
   
 script:
-  - dotnet build /p:Configuration=Release
+  - dotnet build /p:Configuration=Release --framework:netstandard1.6
