@@ -35,7 +35,7 @@ skip_non_tags: false
 # Skipping commits with particular message or from specific user
 skip_commits:
   message: /Created.*\.(png|jpg|jpeg|bmp|gif)/      # Regex for matching commit message
-  author: weihanli                                # Commit author's username, name, email or regexp maching one of these.
+  # author: weihanli                                # Commit author's username, name, email or regexp maching one of these.
   # Skipping commits affecting specific files (GitHub only). More details here: /docs/appveyor-yml
   files:
     - docs/*
@@ -63,7 +63,7 @@ max_jobs: 1
 #---------------------------------#
 
 # Build worker image (VM template)
-image: Visual Studio 2015
+image: Visual Studio 2017
 
 # this is how to allow failing jobs in the matrix
 matrix:
@@ -76,7 +76,7 @@ matrix:
 
 # scripts to run before build
 before_build:
-  - nuget restore MvcSimplePager.sln
+  - dotnet restore
 # scripts to run *after* solution is built and *before* automatic packaging occurs (web apps, NuGet packages, Azure Cloud Services)
 before_package:
   
@@ -85,31 +85,7 @@ after_build:
 
 # to run your custom scripts instead of automatic MSBuild
 build_script:
-  - msbuild MvcSimplePager.sln
+  - dotnet --info
+  - dotnet build
 # to disable automatic builds
 #build: off
-
-#---------------------------------#
-#       tests configuration       #
-#---------------------------------#
-
-# scripts to run before tests
-before_test:
-  - test begin
-  - nuget install xunit.runner.console -Version 2.2.0 -OutputDirectory testrunner
-  - nuget install OpenCover -Version 4.6.519 -OutputDirectory openCover
-
-# scripts to run after tests
-after_test:
-  - test end
-  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
-  - pip install codecov
-  - codecov -f "MvcSimplePager_coverage.xml" -t fccda60c-9cc3-446e-a7fb-98f5c179cda1
-  
-# to run your custom scripts instead of automatic tests
-test_script:
-  - .\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe .\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll
-  - .\openCover\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:".\MvcSimplePager.Test\bin\Debug\MvcSimplePager.Test.dll -noshadow" -excludebyattribute:*.ExcludeFromCodeCoverage* -output:".\MvcSimplePager_coverage.xml"
-  
-# to disable automatic tests
-#test: off
