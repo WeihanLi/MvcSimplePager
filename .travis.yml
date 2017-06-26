@@ -1,13 +1,12 @@
 language: csharp
 solution: MvcSimplePager.sln
 # runtime config
-mono: none
+mono: latest
 dotnet: 1.0.4
 dist: trusty
 
 install:
   - dotnet restore
 script:
-  - dotnet build /p:Configuration=Release ./MvcSimplePager/MvcSimplePager.csproj
-  - dotnet build /p:Configuration=Release ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
+  - dotnet build
   - dotnet test ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
