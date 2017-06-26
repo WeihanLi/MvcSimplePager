@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-#if NET462
+#if NET45
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 #else
@@ -15,7 +15,7 @@ namespace MvcSimplePager
     /// </summary>
     public static class PagerHelper
     {
-#if NET462
+#if NET45
         /// <summary>
         /// HtmlHelper Pager - 扩展方法
         /// </summary>

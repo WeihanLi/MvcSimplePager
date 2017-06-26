@@ -9,4 +9,3 @@ install:
   - dotnet restore
 script:
   - dotnet build
-  - dotnet test ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
