@@ -9,4 +9,4 @@ install:
   - dotnet restore
   
 script:
-  - dotnet msbuild /p:Configuration=Release
+  - dotnet build /p:Configuration=Release
