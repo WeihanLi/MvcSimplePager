@@ -110,7 +110,8 @@ after_test:
   
 # to run your custom scripts instead of automatic tests
 test_script:
-  - .\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe .\MvcSimplePager.Test\bin\Debug\netstandard1.6\MvcSimplePager.Test.dll
+  # - .\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe .\MvcSimplePager.Test\bin\Debug\netstandard1.6\MvcSimplePager.Test.dll
+  - dotnet test .\MvcSimplePager.Test\MvcSimplePager.Test.csproj
   - .\openCover\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:".\MvcSimplePager.Test\bin\Debug\netstandard1.6\MvcSimplePager.Test.dll -noshadow" -excludebyattribute:*.ExcludeFromCodeCoverage* -output:".\MvcSimplePager_coverage.xml"
   
 # to disable automatic tests
