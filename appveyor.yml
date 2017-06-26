@@ -90,3 +90,8 @@ build_script:
   - dotnet build
 # to disable automatic builds
 #build: off
+
+#---------------------------------#		
+#       tests configuration       #		
+#---------------------------------#		
+test: off
