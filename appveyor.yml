@@ -20,6 +20,7 @@ branches:
   only:
     - master
     - netcore
+    - netstandard
     - production
 
   # blacklist
@@ -89,3 +90,28 @@ build_script:
   - dotnet build
 # to disable automatic builds
 #build: off
+
+#---------------------------------#
+#       tests configuration       #
+#---------------------------------#
+
+# scripts to run before tests
+before_test:
+  - test begin
+  - nuget install xunit.runner.console -Version 2.2.0 -OutputDirectory testrunner
+  - nuget install OpenCover -Version 4.6.519 -OutputDirectory openCover
+
+# scripts to run after tests
+after_test:
+  - test end
+  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
+  - pip install codecov
+  - codecov -f "MvcSimplePager_coverage.xml" -t fccda60c-9cc3-446e-a7fb-98f5c179cda1
+  
+# to run your custom scripts instead of automatic tests
+test_script:
+  - .\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe .\MvcSimplePager.Test\bin\Debug\netstandard1.6\MvcSimplePager.Test.dll
+  - .\openCover\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:".\MvcSimplePager.Test\bin\Debug\netstandard1.6\MvcSimplePager.Test.dll -noshadow" -excludebyattribute:*.ExcludeFromCodeCoverage* -output:".\MvcSimplePager_coverage.xml"
+  
+# to disable automatic tests
+#test: off
