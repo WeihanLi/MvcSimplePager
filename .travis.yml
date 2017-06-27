@@ -1,7 +1,7 @@
 language: csharp
 solution: MvcSimplePager.sln
 # runtime config
-mono: latest
+mono: none
 dotnet: 1.0.4
 dist: trusty
 
