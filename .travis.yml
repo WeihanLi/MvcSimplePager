@@ -10,3 +10,4 @@ install:
   
 script:
   - dotnet build /p:Configuration=Release --framework:netstandard1.6
+  - dotnet test ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
