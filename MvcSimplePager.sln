@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcSimplePager", "MvcSimple
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7953EA2B-1398-4010-9DC5-6DB63E829D42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSimplePager.Test", "MvcSimplePager.Test\MvcSimplePager.Test.csproj", "{DF814A94-A988-4367-AB21-84A9DF133B8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSimplePager.Test", "MvcSimplePager.Test\MvcSimplePager.Test.csproj", "{5B1F7784-F5CF-4DEC-A40B-72CC7FF5B8CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,16 +21,16 @@ Global
 		{8BBD2443-F635-4986-8F7F-DE9C5E74DC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BBD2443-F635-4986-8F7F-DE9C5E74DC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BBD2443-F635-4986-8F7F-DE9C5E74DC78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF814A94-A988-4367-AB21-84A9DF133B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF814A94-A988-4367-AB21-84A9DF133B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF814A94-A988-4367-AB21-84A9DF133B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF814A94-A988-4367-AB21-84A9DF133B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1F7784-F5CF-4DEC-A40B-72CC7FF5B8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1F7784-F5CF-4DEC-A40B-72CC7FF5B8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1F7784-F5CF-4DEC-A40B-72CC7FF5B8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1F7784-F5CF-4DEC-A40B-72CC7FF5B8CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8BBD2443-F635-4986-8F7F-DE9C5E74DC78} = {DCBCE71F-B72B-43E3-AEC3-6C0F13561E21}
-		{DF814A94-A988-4367-AB21-84A9DF133B8E} = {7953EA2B-1398-4010-9DC5-6DB63E829D42}
+		{5B1F7784-F5CF-4DEC-A40B-72CC7FF5B8CE} = {7953EA2B-1398-4010-9DC5-6DB63E829D42}
 	EndGlobalSection
 EndGlobal
