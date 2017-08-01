@@ -7,7 +7,7 @@ namespace MvcSimplePager
     /// IPagedListModel
     /// </summary>
     /// <typeparam name="T">Type</typeparam>
-    public interface IPagedListModel<out T> : IEnumerable<T>, IEnumerable
+    public interface IPagedListModel<out T> : IEnumerable<T>
     {
         /// <summary>
         /// Data
