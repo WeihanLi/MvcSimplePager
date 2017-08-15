@@ -9,5 +9,5 @@ install:
   - dotnet restore
   
 script:
-  - dotnet build /p:Configuration=Release --framework:netstandard1.6 ./MvcSimplePager/MvcSimplePager.csproj
+  - dotnet build /p:Configuration=Release --framework:netstandard2.0 ./MvcSimplePager/MvcSimplePager.csproj
   - dotnet test ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
