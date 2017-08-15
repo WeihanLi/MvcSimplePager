@@ -8,15 +8,6 @@ namespace MvcSimplePager.Test
     public class PagerTest
     {
         [Fact]
-        public void PageIndexAndPageSizeTest()
-        {
-            var pager = Enumerable.Range(11, 10).ToPagedList(2, 10, 40);
-            Assert.Equal(2, pager.Pager.PageIndex);
-            Assert.Equal(10, pager.Pager.PageSize);
-            Assert.Equal(40, pager.Pager.TotalCount);
-        }
-
-        [Fact]
         public void PageCountTest()
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(1, 10, 40);
