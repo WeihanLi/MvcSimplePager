@@ -63,23 +63,6 @@ max_jobs: 1
 #    environment configuration    #
 #---------------------------------#
 
-dotnet_csproj:
-  patch: true
-  file: '**\*.csproj'
-  version: '2.0.0'
-
-# Build worker image (VM template)
-image: Visual Studio 2017
-
-# this is how to allow failing jobs in the matrix
-matrix:
-  fast_finish: true     # set this flag to immediately finish build once one of the jobs fails.
-  allow_failures:
-    - platform: x86
-      configuration: Debug
-    - platform: x64
-      configuration: Release
-
 # scripts to run before build
 before_build:
   - dotnet --info
