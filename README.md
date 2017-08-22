@@ -2,15 +2,17 @@
 
  Type  | Status 
 ------ | ------------ 
+lincense | [![license](https://img.shields.io/github/license/WeihanLi/MvcSimplePager.svg)](https://github.com/WeihanLi/MvcSimplePager) |
 travis | [![Build Status](https://travis-ci.org/WeihanLi/MvcSimplePager.svg?branch=netstandard)](https://travis-ci.org/WeihanLi/MvcSimplePager) | 
 appveyor | [![Build status](https://ci.appveyor.com/api/projects/status/f3oagcolf02ttyfe?svg=true)](https://ci.appveyor.com/project/WeihanLi/mvcsimplepager) |
 nuget | [![MvcSimplePager](https://img.shields.io/nuget/v/mvcsimplepager.svg)](http://www.nuget.org/packages/MvcSimplePager/) |
+downloads | [![NuGet](https://img.shields.io/nuget/dt/MvcSimplePager.svg)](http://www.nuget.org/packages/MvcSimplePager/)
 codecov | [![codecov](https://codecov.io/gh/WeihanLi/MvcSimplePager/branch/master/graph/badge.svg)](https://codecov.io/gh/WeihanLi/MvcSimplePager) |
 
 ## Intro
 MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的轻量级分页扩展，可以自定义分页时调用的方法，自定义分页所用的样式，样式与代码分离，维护方便。
 
-现已支持.netcore
+同时支持 asp.net mvc与 asp.net core
 
 网上有许多分页都是查询所有数据再从中查询某一页的数据，但是个人感觉数据很少时还可以，如果数据比较多这样根本是不可行的，需要哪一页数据再查询哪一页的数据才是正确的做法，才能一定程度上提高查询的效率。
 
@@ -23,7 +25,7 @@ MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的�
 1. 在需要分页的视图中引用 `@Html.Pager` 扩展方法，并设置必要的分页信息参数
 1. 建议在 Views 引用的命名空间中加入 `MvcSimplePager` 以更方便的使用，添加命名空间方法如下：
 
-    - asp.net
+    - asp.net mvc
 
     在 Views 目录下面的 web.config 文件中的 `system.web.webPages.razor` 节点下 `paged` 下 `namespaces` 节点下增加 `MvcSimplePager` 命名空间
     效果如下：
