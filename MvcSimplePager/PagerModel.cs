@@ -16,7 +16,7 @@ namespace MvcSimplePager
 
         public int TotalCount { get; set; }
 
-        public PagerModel(int pageIndex , int pageSize , int totalCount)
+        public PagerModel(int pageIndex, int pageSize, int totalCount)
         {
             PageIndex = pageIndex;
             PageSize = pageSize;
@@ -49,9 +49,10 @@ namespace MvcSimplePager
             }
         }
 
-        public Func<int , string> OnPageChange { get; set; }
+        public Func<int, string> OnPageChange { get; set; }
 
         private int groupSize = 12;
+
         public int GroupSize
         {
             get { return groupSize; }

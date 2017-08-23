@@ -6,36 +6,7 @@ using System.Linq;
 namespace MvcSimplePager
 {
     /// <summary>
-    /// IPagedListModel 
-    /// </summary>
-    /// <typeparam name="T">Type</typeparam>
-    public interface IPagedListModel<out T> : IEnumerable<T>, IEnumerable
-    {
-        /// <summary>
-        /// Data 
-        /// </summary>
-        IEnumerable<T> Data { get; }
-
-        /// <summary>
-        /// PagerModel 
-        /// </summary>
-        IPagerModel Pager { get; }
-
-        /// <summary>
-        /// Indexer 
-        /// </summary>
-        /// <param name="i"> index </param>
-        /// <returns></returns>
-        T this[int i] { get; }
-
-        /// <summary>
-        /// Data.Count 
-        /// </summary>
-        int Count { get; }
-    }
-
-    /// <summary>
-    /// PagedListModel 
+    /// PagedListModel
     /// </summary>
     /// <typeparam name="T">Type</typeparam>
     public class PagedListModel<T> : IPagedListModel<T>
@@ -79,23 +50,6 @@ namespace MvcSimplePager
                 }
                 return Data.ToArray()[i];
             }
-        }
-    }
-
-    /// <summary>
-    /// PagedList extensions 
-    /// </summary>
-    public static class Extensions
-    {
-        [Obsolete("请使用 ToPagedList<T>(this IEnumerable<T> data, int pageIndex, int pageSize, int totalCount)")]
-        public static IPagedListModel<T> ToPagedList<T>(this IEnumerable<T> data, IPagerModel pager)
-        {
-            return new PagedListModel<T>(data, pager);
-        }
-
-        public static IPagedListModel<T> ToPagedList<T>(this IEnumerable<T> data, int pageIndex, int pageSize, int totalCount)
-        {
-            return new PagedListModel<T>(data, new PagerModel(pageIndex, pageSize, totalCount));
         }
     }
 }
