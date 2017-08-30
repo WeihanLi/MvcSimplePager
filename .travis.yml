@@ -1,5 +1,5 @@
 language: csharp
-solution: MvcSimplePager.sln
+solution: WeihanLi.AspNetMvc.MvcSimplePager.sln
 # runtime config
 mono: none
 dotnet: 2.0.0
@@ -10,5 +10,5 @@ install:
   - dotnet restore
   
 script:
-  - dotnet build /p:Configuration=Release --framework:netstandard2.0 ./MvcSimplePager/MvcSimplePager.csproj
-  - dotnet test ./MvcSimplePager.Test/MvcSimplePager.Test.csproj
+  - dotnet build /p:Configuration=Release --framework:netstandard2.0 ./WeihanLi.AspNetMvc.MvcSimplePager/WeihanLi.AspNetMvc.MvcSimplePager.csproj
+  - dotnet test ./WeihanLi.AspNetMvc.MvcSimplePager.Test/WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj
