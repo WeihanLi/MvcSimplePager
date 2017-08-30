@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <PackageId>WeihanLi.AspNetMvc.MvcSimplePager</PackageId>
-    <PackageVersion>2.0.1.0</PackageVersion>
+    <PackageVersion>1.0.0.0</PackageVersion>
     <Authors>WeihanLi</Authors>
     <Description>Simple,lightweight,easy to expand pager for asp.net mvc and asp.net core</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
