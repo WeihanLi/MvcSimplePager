@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MvcSimplePager
+namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
     /// <summary>
     /// 分页信息模型接口

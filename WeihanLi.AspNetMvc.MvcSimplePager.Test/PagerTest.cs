@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
 using Xunit;
-using MvcSimplePager;
 
-namespace MvcSimplePager.Test
+namespace WeihanLi.AspNetMvc.MvcSimplePager.Test
 {
     public class PagerTest
     {
