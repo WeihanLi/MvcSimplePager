@@ -10,7 +10,7 @@
     <Copyright>Copyright 2017 (c) WeihanLi</Copyright>
     <PackageTags>Pager MvcPager AspNetCorePager MvcSimplePager</PackageTags>
     <Version>1.0.0</Version>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/WeihanLi/MvcSimplePager/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/WeihanLi/MvcSimplePager</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
