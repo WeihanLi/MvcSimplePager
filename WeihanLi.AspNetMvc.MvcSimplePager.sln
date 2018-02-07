@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DCBCE71F-B72
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7953EA2B-1398-4010-9DC5-6DB63E829D42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeihanLi.AspNetMvc.MvcSimplePager", "WeihanLi.AspNetMvc.MvcSimplePager\WeihanLi.AspNetMvc.MvcSimplePager.csproj", "{47598CE6-60F1-420A-B6EA-796DD0962E4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeihanLi.AspNetMvc.MvcSimplePager", "src\WeihanLi.AspNetMvc.MvcSimplePager\WeihanLi.AspNetMvc.MvcSimplePager.csproj", "{47598CE6-60F1-420A-B6EA-796DD0962E4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeihanLi.AspNetMvc.MvcSimplePager.Test", "WeihanLi.AspNetMvc.MvcSimplePager.Test\WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj", "{41545CDF-447A-4723-8F18-31C564FE898E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeihanLi.AspNetMvc.MvcSimplePager.Test", "test\WeihanLi.AspNetMvc.MvcSimplePager.Test\WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj", "{41545CDF-447A-4723-8F18-31C564FE898E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
