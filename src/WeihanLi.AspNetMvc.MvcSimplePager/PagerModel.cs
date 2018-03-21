@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MvcSimplePager
+namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
     /// <summary>
     /// 分页模型
@@ -24,15 +24,15 @@ namespace MvcSimplePager
             PageCount = Convert.ToInt32(Math.Ceiling(TotalCount * 1.0 / PageSize));
         }
 
-        public bool IsFirstPage { get { return PageIndex <= 1; } }
+        public bool IsFirstPage => PageIndex <= 1;
 
-        public bool IsLastPage { get { return PageIndex >= PageCount; } }
+        public bool IsLastPage => PageIndex >= PageCount;
 
-        public bool HasPreviousPage { get { return PageIndex > 1; } }
+        public bool HasPreviousPage => PageIndex > 1;
 
-        public bool HasNextPage { get { return PageIndex < PageCount; } }
+        public bool HasNextPage => PageIndex < PageCount;
 
-        public int FirstItem { get { return (PageIndex - 1) * PageSize + 1; } }
+        public int FirstItem => (PageIndex - 1) * PageSize + 1;
 
         public int LastItem
         {

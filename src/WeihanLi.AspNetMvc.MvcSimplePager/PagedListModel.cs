@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MvcSimplePager
+namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
     /// <summary>
     /// PagedListModel
@@ -15,10 +15,7 @@ namespace MvcSimplePager
 
         public IPagerModel Pager { get; }
 
-        public int Count
-        {
-            get { return Data.Count(); }
-        }
+        public int Count => Data.Count();        
 
         public PagedListModel(IEnumerable<T> data, IPagerModel pager)
         {
@@ -48,7 +45,7 @@ namespace MvcSimplePager
                 {
                     throw new IndexOutOfRangeException(String.Format("索引超出限制，索引值为：{0}，最大值为：{1}", i, Count - 1));
                 }
-                return Data.ToArray()[i];
+                return Data.ElementAt(i);
             }
         }
     }

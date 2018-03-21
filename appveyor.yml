@@ -63,10 +63,6 @@ max_jobs: 1
 #    environment configuration    #
 #---------------------------------#
 
-install:
-  - cmd: curl -O https://download.microsoft.com/download/0/F/D/0FD852A4-7EA1-4E2A-983A-0484AC19B92C/dotnet-sdk-2.0.0-win-x64.exe
-  - cmd: dotnet-sdk-2.0.0-win-x64.exe /install /quiet /norestart /log install.log 
-
 # scripts to run before build
 before_build:
   - dotnet --info
@@ -100,8 +96,8 @@ after_test:
   
 # to run your custom scripts instead of automatic tests
 test_script:
-  - dotnet test .\MvcSimplePager.Test\MvcSimplePager.Test.csproj
-  - .\openCover\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:".\MvcSimplePager.Test\bin\Debug\netcoreapp1.1\MvcSimplePager.Test.dll -noshadow" -excludebyattribute:*.ExcludeFromCodeCoverage* -output:".\MvcSimplePager_coverage.xml"
+  - dotnet test .\test\WeihanLi.AspNetMvc.MvcSimplePager.Test\WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj
+  - .\openCover\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:".\test\WeihanLi.AspNetMvc.MvcSimplePager.Test\bin\Debug\netcoreapp2.0\MvcSimplePager.Test.dll -noshadow" -excludebyattribute:*.ExcludeFromCodeCoverage* -output:".\MvcSimplePager_coverage.xml"
   
 # to disable automatic tests
 #test: off

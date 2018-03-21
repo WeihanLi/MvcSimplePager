@@ -1,9 +1,9 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Moq;
 using Xunit;
-using MvcSimplePager;
 
-namespace MvcSimplePager.Test
+namespace WeihanLi.AspNetMvc.MvcSimplePager.Test
 {
     public class PagerTest
     {
@@ -74,6 +74,18 @@ namespace MvcSimplePager.Test
         {
             var pager = Enumerable.Range(11, 10).ToPagedList(2, 10, 26);
             Assert.Equal(14, pager[3]);
+        }
+
+        [Fact]
+        public void PagerHelperTest()
+        {
+            var helper = Mock.Of<IHtmlHelper>();
+            var result = helper.Pager(new PagerModel(1, 20, 200), pageIndex => $"javascript:loaddata({pageIndex})");
+            Assert.Equal(helper.Partial("_PagerPartial", new PagerModel(1, 20, 100)
+            {
+                OnPageChange = pageIndex => $"javascript:loaddata({pageIndex})",
+                PagingDisplayMode = PagingDisplayMode.Always
+            }), result);
         }
     }
 }

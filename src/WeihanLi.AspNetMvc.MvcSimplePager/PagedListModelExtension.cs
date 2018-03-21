@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using WeihanLi.AspNetMvc.MvcSimplePager;
 
-namespace MvcSimplePager
+namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
     public static class PagedListModelExtension
     {

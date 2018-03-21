@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace MvcSimplePager
+namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
     /// <summary>
     /// IPagedListModel
