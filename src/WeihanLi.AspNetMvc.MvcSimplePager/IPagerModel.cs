@@ -16,7 +16,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
         /// <summary>
         /// 页码索引
         /// </summary>
-        int PageIndex { get; set; }
+        int PageNumber { get; set; }
 
         /// <summary>
         /// 页码容量，每页数据量

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
@@ -7,12 +6,12 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     /// IPagedListModel
     /// </summary>
     /// <typeparam name="T">Type</typeparam>
-    public interface IPagedListModel<out T> : IEnumerable<T>
+    public interface IPagedListModel<T> : IEnumerable<T>
     {
         /// <summary>
         /// Data
         /// </summary>
-        IEnumerable<T> Data { get; }
+        IList<T> Data { get; }
 
         /// <summary>
         /// PagerModel

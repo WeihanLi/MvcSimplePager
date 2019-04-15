@@ -2,16 +2,14 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <PackageId>WeihanLi.AspNetMvc.MvcSimplePager</PackageId>
-    <PackageVersion>1.0.0.0</PackageVersion>
     <Authors>WeihanLi</Authors>
     <Description>Simple,lightweight,easy to expand pager for asp.net mvc and asp.net core</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>add asp.net core support</PackageReleaseNotes>
-    <Copyright>Copyright 2017 (c) WeihanLi</Copyright>
+    <Copyright>Copyright 2017-2019 (c) WeihanLi</Copyright>
     <PackageTags>Pager MvcPager AspNetCorePager MvcSimplePager</PackageTags>
-    <Version>1.0.0</Version>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/WeihanLi/MvcSimplePager/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>1.1.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/WeihanLi/MvcSimplePager</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/WeihanLi/MvcSimplePager</RepositoryUrl>

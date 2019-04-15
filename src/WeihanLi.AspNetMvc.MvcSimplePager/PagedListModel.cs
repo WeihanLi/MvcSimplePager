@@ -11,15 +11,15 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     /// <typeparam name="T">Type</typeparam>
     public class PagedListModel<T> : IPagedListModel<T>
     {
-        public IEnumerable<T> Data { get; }
+        public IList<T> Data { get; }
 
         public IPagerModel Pager { get; }
 
-        public int Count => Data.Count();        
+        public int Count => Data.Count();
 
         public PagedListModel(IEnumerable<T> data, IPagerModel pager)
         {
-            Data = data;
+            Data = data?.ToArray() ?? new T[0];
             Pager = pager;
         }
 

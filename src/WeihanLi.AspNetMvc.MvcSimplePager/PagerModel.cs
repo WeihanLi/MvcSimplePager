@@ -8,7 +8,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     public class PagerModel : IPagerModel
     {
         public PagingDisplayMode PagingDisplayMode { get; set; }
-        public int PageIndex { get; set; }
+        public int PageNumber { get; set; }
 
         public int PageSize { get; set; }
 
@@ -16,23 +16,23 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
 
         public int TotalCount { get; set; }
 
-        public PagerModel(int pageIndex, int pageSize, int totalCount)
+        public PagerModel(int pageNumber, int pageSize, int totalCount)
         {
-            PageIndex = pageIndex;
+            PageNumber = pageNumber;
             PageSize = pageSize;
             TotalCount = totalCount;
             PageCount = Convert.ToInt32(Math.Ceiling(TotalCount * 1.0 / PageSize));
         }
 
-        public bool IsFirstPage => PageIndex <= 1;
+        public bool IsFirstPage => PageNumber <= 1;
 
-        public bool IsLastPage => PageIndex >= PageCount;
+        public bool IsLastPage => PageNumber >= PageCount;
 
-        public bool HasPreviousPage => PageIndex > 1;
+        public bool HasPreviousPage => PageNumber > 1;
 
-        public bool HasNextPage => PageIndex < PageCount;
+        public bool HasNextPage => PageNumber < PageCount;
 
-        public int FirstItem => (PageIndex - 1) * PageSize + 1;
+        public int FirstItem => (PageNumber - 1) * PageSize + 1;
 
         public int LastItem
         {
@@ -44,7 +44,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
                 }
                 else
                 {
-                    return PageIndex * PageSize;
+                    return PageNumber * PageSize;
                 }
             }
         }
