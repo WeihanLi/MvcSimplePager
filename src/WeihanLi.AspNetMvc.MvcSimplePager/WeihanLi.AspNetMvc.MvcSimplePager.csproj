@@ -2,10 +2,11 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
     <PackageId>WeihanLi.AspNetMvc.MvcSimplePager</PackageId>
+    <Title>MvcSimplePager</Title>
     <Authors>WeihanLi</Authors>
     <Description>Simple,lightweight,easy to expand pager for asp.net mvc and asp.net core</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>add asp.net core support</PackageReleaseNotes>
+    <PackageReleaseNotes>optimize code</PackageReleaseNotes>
     <Copyright>Copyright 2017-2019 (c) WeihanLi</Copyright>
     <PackageTags>Pager MvcPager AspNetCorePager MvcSimplePager</PackageTags>
     <Version>1.1.0</Version>
