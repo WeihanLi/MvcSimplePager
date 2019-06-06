@@ -8,6 +8,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     public class PagerModel : IPagerModel
     {
         public PagingDisplayMode PagingDisplayMode { get; set; }
+
         public int PageNumber { get; set; }
 
         public int PageSize { get; set; }
@@ -55,7 +56,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
 
         public int GroupSize
         {
-            get { return groupSize; }
+            get => groupSize;
             set
             {
                 if (value > 1)

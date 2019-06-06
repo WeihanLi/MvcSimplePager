@@ -11,7 +11,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     /// <typeparam name="T">Type</typeparam>
     public class PagedListModel<T> : IPagedListModel<T>
     {
-        public IList<T> Data { get; }
+        public IReadOnlyList<T> Data { get; }
 
         public IPagerModel Pager { get; }
 
@@ -43,7 +43,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
                 }
                 if (i >= Count)
                 {
-                    throw new IndexOutOfRangeException(String.Format("索引超出限制，索引值为：{0}，最大值为：{1}", i, Count - 1));
+                    throw new IndexOutOfRangeException($"索引超出限制，索引值为：{i}，最大值为：{Count - 1}");
                 }
                 return Data.ElementAt(i);
             }
