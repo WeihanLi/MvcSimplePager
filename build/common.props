@@ -6,7 +6,7 @@
     <Authors>WeihanLi</Authors>
     <Description>Simple,lightweight,easy to expand pager for asp.net mvc and asp.net core</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>optimize code</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/WeihanLi/MvcSimplePager/blob/dev/ReleaseNotes.md</PackageReleaseNotes>
     <Copyright>Copyright 2017-2019 (c) WeihanLi</Copyright>
     <PackageTags>Pager MvcPager AspNetCorePager MvcSimplePager</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
