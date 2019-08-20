@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("WeihanLi.AspNetMvc.MvcSimplePager.Test")]
 
 namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
@@ -9,7 +12,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     /// PagedListModel
     /// </summary>
     /// <typeparam name="T">Type</typeparam>
-    public class PagedListModel<T> : IPagedListModel<T>
+    internal class PagedListModel<T> : IPagedListModel<T>
     {
         public IReadOnlyList<T> Data { get; }
 

@@ -45,7 +45,6 @@ skip_commits:
 
 # Including commits with particular message or from specific user
 only_commits:
-  message: '*'                # Start a new build if message contains 'build'
   author: weihanli@outlook.com        # Start a new build for commit of user with email jack@company.com
 
 # Including commits affecting specific files (GitHub only). More details here: /docs/appveyor-yml

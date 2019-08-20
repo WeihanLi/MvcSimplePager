@@ -5,7 +5,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
     /// <summary>
     /// 分页模型
     /// </summary>
-    public class PagerModel : IPagerModel
+    internal class PagerModel : IPagerModel
     {
         public PagingDisplayMode PagingDisplayMode { get; set; }
 

@@ -9,13 +9,16 @@
     <PackageReleaseNotes>optimize code</PackageReleaseNotes>
     <Copyright>Copyright 2017-2019 (c) WeihanLi</Copyright>
     <PackageTags>Pager MvcPager AspNetCorePager MvcSimplePager</PackageTags>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/WeihanLi/MvcSimplePager</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/WeihanLi/MvcSimplePager</RepositoryUrl>
     <AssemblyName>WeihanLi.AspNetMvc.MvcSimplePager</AssemblyName>
     <RootNamespace>WeihanLi.AspNetMvc.MvcSimplePager</RootNamespace>
+    <!-- does not work for now  https://github.com/dotnet/sdk/issues/3299
+    <InternalsVisibleTo>WeihanLi.AspNetMvc.MvcSimplePager.Test</InternalsVisibleTo>
+    -->
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="WeihanLi.Common" Version="1.0.24" />
