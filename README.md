@@ -3,10 +3,10 @@
  Type  | Status
 ------ | ------------
 lincense | [![license](https://img.shields.io/github/license/WeihanLi/MvcSimplePager.svg)](https://github.com/WeihanLi/MvcSimplePager) |
-travis | [![Build Status](https://travis-ci.org/WeihanLi/MvcSimplePager.svg?branch=netstandard)](https://travis-ci.org/WeihanLi/MvcSimplePager) |
+travis | [![Build Status](https://travis-ci.org/WeihanLi/MvcSimplePager.svg?branch=dev)](https://travis-ci.org/WeihanLi/MvcSimplePager) |
 appveyor | [![Build status](https://ci.appveyor.com/api/projects/status/f3oagcolf02ttyfe?svg=true)](https://ci.appveyor.com/project/WeihanLi/mvcsimplepager) |
 nuget | [![WeihanLi.AspNetMvc.MvcSimplePager](https://img.shields.io/nuget/v/WeihanLi.AspNetMvc.MvcSimplePager.svg)](http://www.nuget.org/packages/WeihanLi.AspNetMvc.MvcSimplePager/) |
-codecov | [![codecov](https://codecov.io/gh/WeihanLi/MvcSimplePager/branch/master/graph/badge.svg)](https://codecov.io/gh/WeihanLi/MvcSimplePager) |
+codecov | [![codecov](https://codecov.io/gh/WeihanLi/MvcSimplePager/branch/dev/graph/badge.svg)](https://codecov.io/gh/WeihanLi/MvcSimplePager) |
 
 ## Intro
 
