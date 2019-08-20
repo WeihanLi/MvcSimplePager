@@ -18,7 +18,7 @@
     <RootNamespace>WeihanLi.AspNetMvc.MvcSimplePager</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="WeihanLi.Common" Version="1.0.20" />
+    <PackageReference Include="WeihanLi.Common" Version="1.0.24" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="Microsoft.AspNetCore.Mvc">
