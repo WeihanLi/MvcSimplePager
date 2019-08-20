@@ -85,6 +85,7 @@ build_script:
 
 # scripts to run before tests
 before_test:
+  - nuget install xunit.runner.console -Version 2.2.0 -OutputDirectory testrunner
   - nuget install OpenCover -Version 4.6.519 -OutputDirectory openCover
 
 # scripts to run after tests
