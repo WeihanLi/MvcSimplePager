@@ -84,19 +84,16 @@ build_script:
 
 # scripts to run before tests
 before_test:
-  - nuget install xunit.runner.console -Version 2.2.0 -OutputDirectory testrunner
-  - nuget install OpenCover -Version 4.6.519 -OutputDirectory openCover
+  - choco install opencover.portable codecov
 
 # scripts to run after tests
 after_test:
-  - "SET PATH=C:\\Python34;C:\\Python34\\Scripts;%PATH%"
-  - pip install codecov
+  - OpenCover.Console -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test .\test\WeihanLi.AspNetMvc.MvcSimplePager.Test\WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj" -output:".\MvcSimplePager_coverage.xml" -oldstyle
   - codecov -f "MvcSimplePager_coverage.xml" -t fccda60c-9cc3-446e-a7fb-98f5c179cda1
   
 # to run your custom scripts instead of automatic tests
 test_script:
-  - dotnet test .\test\WeihanLi.AspNetMvc.MvcSimplePager.Test\WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj
-  - .\openCover\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -target:".\testrunner\xunit.runner.console.2.2.0\tools\xunit.console.exe" -targetargs:".\test\WeihanLi.AspNetMvc.MvcSimplePager.Test\bin\Debug\netcoreapp2.0\WeihanLi.AspNetMvc.MvcSimplePager.Test.dll -noshadow" -excludebyattribute:*.ExcludeFromCodeCoverage* -output:".\MvcSimplePager_coverage.xml"
+  - dotnet test .\test\WeihanLi.AspNetMvc.MvcSimplePager.Test\WeihanLi.AspNetMvc.MvcSimplePager.Test.csproj  
   
 # to disable automatic tests
 #test: off
