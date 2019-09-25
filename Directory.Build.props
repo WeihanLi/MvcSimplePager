@@ -2,7 +2,7 @@
   <Import Project="./build/sign.props" />
   <PropertyGroup>
 		<VersionMajor>1</VersionMajor>
-		<VersionMinor>3</VersionMinor>
+		<VersionMinor>4</VersionMinor>
 		<VersionPatch>0</VersionPatch>
 		<VersionRevision>0</VersionRevision>
 		<VersionPrefix Condition="'$(VersionRevision)'=='0'">$(VersionMajor).$(VersionMinor).$(VersionPatch)</VersionPrefix>
