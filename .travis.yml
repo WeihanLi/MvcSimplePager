@@ -3,7 +3,7 @@ solution: WeihanLi.AspNetMvc.MvcSimplePager.sln
 # runtime config
 mono: none
 dotnet: 3.0.100
-dist: trusty
+dist: bionic
 
 install:
   - dotnet --info
