@@ -2,10 +2,12 @@
 
 namespace WeihanLi.AspNetMvc.MvcSimplePager
 {
-    /// <summary>
-    /// 分页模型
-    /// </summary>
-    internal class PagerModel : IPagerModel
+#if DEBUG
+    public
+#else    
+    internal
+#endif
+     class PagerModel : IPagerModel
     {
         public PagingDisplayMode PagingDisplayMode { get; set; }
 
