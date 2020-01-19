@@ -1,4 +1,4 @@
-# WeihanLi.AspNetMvc.MvcSimplePager
+# MvcSimplePager
 
  Type  | Status
 ------ | ------------
