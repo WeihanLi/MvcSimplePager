@@ -9,7 +9,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
             return new PagedListModel<T>(data, new PagerModel(pageNumber, pageSize, totalCount));
         }
 
-        public static IPagedListModel<T> ToPagedList<T>(this WeihanLi.Common.Models.IPagedListModel<T> data)
+        public static IPagedListModel<T> ToPagedList<T>(this WeihanLi.Common.Models.IPagedListResult<T> data)
         {
             return new PagedListModel<T>(data.Data, new PagerModel(data.PageNumber, data.PageSize, data.TotalCount));
         }

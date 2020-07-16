@@ -7,7 +7,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
 #else    
     internal
 #endif
-     class PagerModel : IPagerModel
+     sealed class PagerModel : IPagerModel
     {
         public PagingDisplayMode PagingDisplayMode { get; set; }
 
