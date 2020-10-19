@@ -2,7 +2,7 @@ language: csharp
 solution: WeihanLi.AspNetMvc.MvcSimplePager.sln
 # runtime config
 mono: none
-dotnet: 3.1.100
+dotnet: 5.0.0-rc.2.20475.5
 dist: bionic
 
 install:

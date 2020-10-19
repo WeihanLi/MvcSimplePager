@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>            
-    <TargetFrameworks>netstandard2.0;net45;netcoreapp3.0;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45;netcoreapp3.1;net5.0</TargetFrameworks>
     <PackageId>WeihanLi.AspNetMvc.MvcSimplePager</PackageId>
     <Title>MvcSimplePager</Title>
     <Authors>WeihanLi</Authors>
