@@ -14,7 +14,7 @@ namespace WeihanLi.AspNetMvc.MvcSimplePager
             return new PagedListModel<T>(data.Data, new PagerModel(data.PageNumber, data.PageSize, data.TotalCount));
         }
 
-        public static IPagedListModel<T> ToPagedList<T>(this WeihanLi.Common.Models.IListResultWithTotalCount<T> data, int pageNum, int pageSize)
+        public static IPagedListModel<T> ToPagedList<T>(this WeihanLi.Common.Models.IListResultWithTotal<T> data, int pageNum, int pageSize)
         {
             return new PagedListModel<T>(data.Data, new PagerModel(pageNum, pageSize, data.TotalCount));
         }
