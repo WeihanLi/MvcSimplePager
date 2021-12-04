@@ -57,6 +57,7 @@ MvcSimplePager 是为解决分页的而做的一个通用、扩展性良好的�
     @using WeihanLi.AspNetMvc.MvcSimplePager
     @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
     ```
+
 1. 更多使用可参考下面的 Samples
 
 ## Samples
@@ -69,7 +70,7 @@ asp.net core project sample：
 
 ## **Notice**
 
-> 注：原 `MvcSimplePager` 包已不再维护，以后只维护 `WeihanLi.AspNetMvc.MvcSimplePager` 这个包，如果您是新用户请直接使用 `WeihanLi.AspNetMvc.MvcSimplePager` ，如果您是 `MvcSimplePager` 的用户请尽快迁移到 `WeihanLi.AspNetMvc.MvcSimplePager` ，对您造成的不便还请谅解。
+> 注：原 `MvcSimplePager` 包已不再维护，功能迁移至 <https://github.com/WeihanLi/WeihanLi.Web.Extensions/tree/dev/src/WeihanLi.Web.Extensions/Pager>，请使用 `WeihanLi.Web.Extensions` 包替代
 
 ## Contact
 
